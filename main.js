@@ -4,14 +4,30 @@ $(document).on('ready', function() {
 // initialize Masonry after all images have loaded
 	imagesLoaded( container, function() {
   		msnry = new Masonry( container, {
+  		// options
  		 columnWidth: 150,
  		 itemSelector: '.item'
   		});
+	});
+	
+	// Destroy functionality added destroy-append.html page
+	var destroyButton = document.querySelector('.destroy-button')
+	console.log(destroyButton)
+	var isActive = true;
 
-
-
-});
-  		// options
+	eventie.bind(destroyButton, 'click', function() {
+		if (isActive) {
+			msnry.destroy();
+		}
+		else {
+			msnry = new Masonry (container, {
+  			// options
+ 		 	columnWidth: 150,
+ 		 	itemSelector: '.item'
+  			});
+		}
+		isActive = !isActive;
+	});
 
 });
 
