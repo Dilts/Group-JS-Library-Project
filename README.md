@@ -3,6 +3,8 @@ Group-JS-Library-Project
 
 This is a group project that allows us to practice working with shared repositories and presenting new libraries to the class
 
+------------------------------------------------Contributers-------------------------------------------
+
 Contibuters:
   Eric
   Terri
@@ -10,18 +12,18 @@ Contibuters:
   Dana
   Jacob
   
-  
+-------------------------------------------Work Distribution-----------------------------------
   Group work breakout:
   
   Terri - scaffold out the div's and find the placeholder pictures
   
-  Jacob -
+  Jacob - relaxation.js
   
-  Dana - 
+  Dana - layout, remove 
   
-  Eric -
+  Eric - appended, destroy
   
-  Brian - 
+  Brian - stamp
   
   
   
