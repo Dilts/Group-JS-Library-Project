@@ -13,11 +13,14 @@ Contibuters:
   
   Group work breakout:
   
-  Terri - scaffold out the <div>'s and find the placeholder pictures
+  Terri - scaffold out the div's and find the placeholder pictures
+  
   Jacob -
   
   Dana - 
+  
   Eric -
+  
   Brian - 
   
   
