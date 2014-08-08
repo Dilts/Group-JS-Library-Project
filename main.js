@@ -72,8 +72,7 @@ $(document).on('ready', function() {
 	});
 	// Prepend method added to destroy-append.html page
 	$(document).on('click', '.prepend-button', function() {
-		var newDiv = randomElemCreate();
-		$('#container').prepend(newDiv);
+ 		$('#container').prepend(newDiv);
 		
 		imagesLoaded( container, function() {
 			msnry.prepended(newDiv);

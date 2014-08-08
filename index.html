@@ -8,8 +8,104 @@
 </head>
 <body>
 
+<nav class="navbar navbar-default" role="navigation">
+
+<div class="container-fluid">
+	 <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MASONRY</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./destroy-append.html">DESTROY <br> AND <br> APPEND</a></li>
+        <li><a href="http://masonry.desandro.com/methods.html#layout"><br> LAYOUY <br></a></li>
+        <li><a href="http://masonry.desandro.com/methods.html#remove"><br> REMOVE <br></a></li>
+        <li><a href="http://masonry.desandro.com/methods.html#stamp"><br> STAMP <br></a></li>
+
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        
+        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+      </form>
+
+    </div><!-- /.navbar-collapse -->
+    </nav>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+	  <div class="col-xs-12 col-md-6">
+		<div class="content">	
+			<h1> MASONRY JS</h1>
+				<p>Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.</p>
+			<h3> GETTING STARTED</h3>
+				<p><strong>HTML</strong><br>Masonry works on a container element with a group of similar child items.</p>
+
+				<div class="sub"><pre><code class="html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"container"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item w2"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item"</span>&gt;</span>...<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+			</div>
+			<p><strong>Script</strong><br>Include the Masonry script in your site.</p>
+				<div class="sub-content-html"><pre><code class="html"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/path/to/masonry.pkgd.min.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></pre></div>
+			<p><strong>CSS</strong><br>All sizing of items is handled by your CSS.</p>
+				<div><pre><code class="css"><span class="class">.item</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>%;</span></span> <span class="rule">}</span></span>
+<span class="class">.item</span><span class="class">.w2</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span> <span class="rule">}</span></span></code></pre></div>
+
+			<p><strong>Initialize with JavaScript</strong><br>Initialize a Masonry instance with "". The Masonry constructor accepts two arguments: the container element and an options object.</p>
+				<div class="sub-content-html"><pre><code class="js"><span class="keyword">var</span> container = document.querySelector(<span class="string">'#container'</span>);
+<span class="keyword">var</span> msnry = <span class="keyword">new</span> Masonry( container, {
+  <span class="comment">// options</span>
+  columnWidth: <span class="number">200</span>,
+  itemSelector: <span class="string">'.item'</span>
+});</code></pre></div>
+
+	<h1 class="two">imagesLoaded</h1>
+		<p><strong>The problem with images is...</strong><br>Unloaded images can throw off Masonry layouts and cause item elements to overlap. imagesLoaded resolves this issue. imagesLoaded works by triggering a callback after all child images have been loaded.</p>
+			<div class="sub-content-html"><pre><code class="js"><span class="keyword">var</span> container = document.querySelector(<span class="string">'#container'</span>);
+<span class="keyword">var</span> msnry;
+<span class="comment">// initialize Masonry after all images have loaded</span>
+imagesLoaded( container, <span class="keyword">function</span>() {
+  msnry = <span class="keyword">new</span> Masonry( container );
+});</code></pre></div>
+			<div class="sub-content-html"><pre><code class="js"><span class="comment">// or with jQuery</span>
+<span class="keyword">var</span> $container = $(<span class="string">'#container'</span>);
+<span class="comment">// initialize Masonry after all images have loaded  </span>
+$container.imagesLoaded( <span class="keyword">function</span>() {
+  $container.masonry();
+});</code></pre></div>
+
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<img src="./example.jpg">
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <!-- I added the initialize with html.  If you don't want it take out class="js-masonry" and data-masonry-options -->
-<div id="container">
+<!-- <div id="container">
 	
 	<div class="item w2">
 		<img src="http://www.fillmurray.com/200/200">
@@ -64,10 +160,10 @@
 	</div>
 	<div class="item">
 		<img src="http://www.fillmurray.com/120/200">
-	</div>
+	</div> -->
 
 
-</div>
+<!-- </div> -->
 	
 	<script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
