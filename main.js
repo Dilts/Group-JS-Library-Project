@@ -19,7 +19,6 @@ $(document).on('ready', function() {
 	var randomElemCreate = function() {
 		var newDiv = $('<div class="item">')
 		var randomNum = Math.round(Math.random() * 10);
-		console.log(randomNum)
 		var elemSource = 'src=';
 		if (randomNum <= 2) {
 			elemSource += images[0];
@@ -72,8 +71,9 @@ $(document).on('ready', function() {
 	});
 	// Prepend method added to destroy-append.html page
 	$(document).on('click', '.prepend-button', function() {
+		var newDiv = randomElemCreate();		
  		$('#container').prepend(newDiv);
-		
+
 		imagesLoaded( container, function() {
 			msnry.prepended(newDiv);
 		});
